@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav {
   color: white;
+  padding: 20px;
+  background-color: blueviolet;
+  width: 100%;
+  z-index: 9999;
+  /* position: fixed;
+  box-shadow: 0 0 4px 0 rgba(218, 203, 203, 0.5); */
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.fill-spacer {
+  flex: 1 1 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-row .mg-rt {
+  margin-right: 50px;
+}
+
+.Logo {
+  padding: 0px;
+  margin: 0px;
+  font-size: large;
+  font-family: "Grand Hotel", cursive;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.mg-tp {
+  margin-top: 40px;
+}
+.btn-nav {
+  color: white;
+  font-weight: bold;
+  margin-right: 6px;
+  background-color: blueviolet;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+  text-align: center;
+  width: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 1px;
+}
+
+.cardBody {
+  padding: 20px;
+}
+.cardBody h2 {
+  font-size: xxx-large;
+  font-family: "Grand Hotel", cursive;
+  font-weight: 100;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.card input {
+  height: 28px;
+  outline: none;
+  width: 290px;
+}
+
+.card button {
+  height: 28px;
+  width: 290px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  background-color: blueviolet;
+  cursor: pointer;
 }
