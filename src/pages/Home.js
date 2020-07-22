@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <h1> Hello Home Page!! </h1>
-      <button onClick={getAlet}> Hit </button>
+      <button onClick={getAlet}> Hit Me </button>
     </div>
   );
 };

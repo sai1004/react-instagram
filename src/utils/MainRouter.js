@@ -14,8 +14,10 @@ let routes = [
 ];
 
 const MainRouter = () => {
-  const getRoutes = routes.map((route) => {
-    return <Route exact path={route.path} component={route.component} />;
+  const getRoutes = routes.map((route, i) => {
+    return (
+      <Route key={i} exact path={route.path} component={route.component} />
+    );
   });
 
   return (
