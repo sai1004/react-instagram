@@ -6,8 +6,6 @@ nav {
   background-color: blueviolet;
   width: 100%;
   z-index: 9999;
-  /* position: fixed;
-  box-shadow: 0 0 4px 0 rgba(218, 203, 203, 0.5); */
 }
 .flex-row {
   display: flex;
@@ -50,13 +48,14 @@ a {
   color: white;
   text-decoration: none !important;
 }
-
-.card {
+.main_card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+  text-align: center;
+}
+.card {
   text-align: center;
   width: 350px;
   border: 1px solid rgba(0, 0, 0, 0.15);

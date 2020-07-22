@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function submitHandler(e) {
+    e.preventDefault();
+    if (!username || !password) {
+      return false;
+    } else {
+      console.log("username is:", username);
+      console.log("password is:", password);
+      return true;
+    }
+  }
+
   return (
-    <div>
+    <React.Fragment>
       <form onSubmit={submitHandler}>
         <input
           type="email"
@@ -23,10 +37,9 @@ const LoginForm = () => {
           value={password}
           required
         />
-
         <button type="submit"> Submit </button>
       </form>
-    </div>
+    </React.Fragment>
   );
 };
 
