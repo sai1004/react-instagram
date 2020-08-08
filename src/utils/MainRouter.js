@@ -7,25 +7,23 @@ import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 
 let routes = [
-  { path: "/", component: Home },
-  { path: "/profile", component: Profile },
-  { path: "/signin", component: Signin },
-  { path: "/signup", component: Signup },
+   { path: "/", component: Home },
+   { path: "/profile", component: Profile },
+   { path: "/signin", component: Signin },
+   { path: "/signup", component: Signup },
 ];
 
 const MainRouter = () => {
-  const getRoutes = routes.map((route, i) => {
-    return (
-      <Route key={i} exact path={route.path} component={route.component} />
-    );
-  });
-
-  return (
-    <div>
-      <NavBar />
-      <Switch>{getRoutes}</Switch>
-    </div>
-  );
+   return (
+      <div>
+         <NavBar />
+         <Switch>
+            {routes.map((route, i) => {
+               return <Route key={i} exact path={route.path} component={route.component} />;
+            })}
+         </Switch>
+      </div>
+   );
 };
 
 export default MainRouter;
